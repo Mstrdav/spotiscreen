@@ -51,7 +51,7 @@ if (access_token && (state == null || state !== storedState)) {
     "click",
     () => {
       var client_id = "cc490f57e4334c1b8636efb4f2206ed8"; // Your client id
-      var redirect_uri = "mstrdav.github.io/spotiscreen/colintest.html"; // Your redirect uri
+      var redirect_uri = "https://mstrdav.github.io/spotiscreen/colintest.html"; // Your redirect uri
 
       var state = generateRandomString(16);
 
