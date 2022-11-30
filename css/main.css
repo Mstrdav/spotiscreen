@@ -1,4 +1,25 @@
 body
 {
-   background-color: beige;
+   background-color: #e9c46a;
+}
+
+h1
+{
+   text-align: center;
+   color: #264653;
+}
+
+p
+{
+   align-content: center;
+}
+
+button
+{
+   text-align: center;
+}
+
+a
+{
+   text-decoration: none;
 }
