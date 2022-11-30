@@ -1,25 +1,54 @@
+html
+{
+   background: #2A9D8F;
+}
+
 body
 {
-   background-color: #e9c46a;
+   margin: 0px;
+}
+
+header
+{
+   margin-left: 0px;
+   margin-right: 0px;
+   
+   margin-top: 0px;
+   background-color: #264653;
+   padding: 1px;
 }
 
 h1
 {
    text-align: center;
-   color: #264653;
+   color: white;
 }
 
 p
 {
+   padding-left: 20px;
+   padding-right: 20px;
    align-content: center;
+   color: white;
 }
 
 button
 {
+   background-color: #E76F51;
+   border-radius: 8px;
+   border-style: none;
+   box-sizing: inherit;
+   color: white;
+   cursor: pointer;
+   height: auto;
+   width: auto;
+   padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+   position:relative;
    text-align: center;
-}
-
-a
-{
    text-decoration: none;
+   font-size: 14px;
+   font-weight: 800;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
 }
