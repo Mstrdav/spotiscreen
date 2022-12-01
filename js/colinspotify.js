@@ -53,6 +53,21 @@ if (access_token && (state == null || state !== storedState)) {
       console.log(data);
       document.getElementById("spotify").style.display = "none";
     });
+
+    // get most listened to artists
+    fetch("https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=10", {
+      headers: {
+        Authorization: "Bearer " + access_token
+      }
+    }).then(function(response) {
+      return response.json();
+    }).then(function(data) {
+      console.log(data);
+      var artists = document.getElementById("artists");
+      for (var i = 0; i < data.items.length; i++) {
+        artists.innerHTML += data.items[i].name + "<br>";
+      }
+    });
   } else {
     console.log("no access_token: " + access_token);
   }
