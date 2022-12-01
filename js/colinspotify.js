@@ -43,6 +43,16 @@ if (access_token && (state == null || state !== storedState)) {
   localStorage.removeItem(stateKey);
   if (access_token) {
     console.log("access_token: " + access_token);
+    fetch("https://api.spotify.com/v1/me", {
+      headers: {
+        Authorization: "Bearer " + access_token
+      }
+    }).then(function(response) {
+      return response.json();
+    }).then(function(data) {
+      console.log(data);
+      document.getElementById("spotify").style.display = "none";
+    });
   } else {
     console.log("no access_token: " + access_token);
   }
@@ -56,7 +66,7 @@ if (access_token && (state == null || state !== storedState)) {
       var state = generateRandomString(16);
 
       localStorage.setItem(stateKey, state);
-      var scope = "user-read-private user-read-email";
+      var scope = "user-read-private user-top-read";
 
       var url = "https://accounts.spotify.com/authorize";
       url += "?response_type=token";
