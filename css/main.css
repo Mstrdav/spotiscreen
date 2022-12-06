@@ -59,7 +59,6 @@ button:active
 
 footer
 {
-   /*position: absolute;  j'ai mis ca sinon le footer n'allait pas en bas*/
    position:absolute;
    bottom: 10px;
    right: 10px;
