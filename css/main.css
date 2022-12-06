@@ -1,6 +1,6 @@
 @font-face {
    font-family: 'circular_spotify';
-   src: local(circular-spotify-text-font/CircularSpotifyText-Book.otf);
+   src: local(circular-spotify-text-font/CircularSpotifyText-Book);
 }
 
 html
