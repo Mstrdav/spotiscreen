@@ -64,5 +64,6 @@ button:active
 footer
 {
    text-align: right;
+   bottom: 0;
    color: white;
 }
