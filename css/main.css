@@ -1,6 +1,6 @@
 @font-face {
    font-family: 'circular_spotify';
-   src: local(circularSpotifyText-Book);
+   src: url(../circular-spotify-text-font/CircularSpotifyText-Book.otf);
 }
 
 html
@@ -18,7 +18,7 @@ h1
 {
    text-align: center;
    color: #000;
-   font-size: 112pt;
+   font-size: 56pt;
 }
 
 p
@@ -27,14 +27,15 @@ p
    padding-right: 20px;
    align-content: center;
    color: #000;
+   font-size: 20pt;
 }
 
 button
 {
-   background-color: #E76F51;
+   background-color: #000;
    color: white;
-   border: none;
-   outline: none;
+   border: 10px;
+   outline: 10px;
    display: block;
    width: auto;
    margin: auto;
@@ -50,7 +51,10 @@ button
 
 button:hover
 {
-   box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.2);
+   background-color: #ECD06F;
+   color: #000;
+   
+
 }
 
 button:active
