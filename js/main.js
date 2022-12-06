@@ -38,6 +38,7 @@ var access_token = params.access_token,
   storedState = localStorage.getItem(stateKey);
 
 if (access_token && (state == null || state !== storedState)) {
+  console.log(state);
   alert("There was an error during the authentication");
 } else {
   localStorage.removeItem(stateKey);
