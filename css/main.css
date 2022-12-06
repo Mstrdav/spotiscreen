@@ -1,6 +1,12 @@
+@font-face {
+   font-family: 'circular_spotify';
+   src: local(circular-spotify-text-font/CircularSpotifyText-Book);
+}
+
 html
 {
-   background: #2A9D8F;
+   background: #ECD06F;
+   font-family: "circular_spotify";
 }
 
 body
@@ -63,7 +69,8 @@ button:active
 
 footer
 {
-   text-align: right;
+   position: absolute;  /*j'ai mis ca sinon le footer n'allait pas en bas*/
+   margin: 10px;
    bottom: 0;
    color: white;
 }
