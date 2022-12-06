@@ -63,7 +63,8 @@ button:active
 
 footer
 {
-   text-align: right;
+   position: absolute;  /*j'ai mis ca sinon le footer n'allait pas en bas*/
+   margin: 10px;
    bottom: 0;
    color: white;
 }
