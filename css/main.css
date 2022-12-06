@@ -1,12 +1,12 @@
 @font-face {
    font-family: 'circular_spotify';
-   src: local(circular-spotify-text-font/CircularSpotifyText-Book.otf);
+   src: local(circularSpotifyText-Book);
 }
 
 html
 {
    background: #ECD06F;
-   font-family: "circular_spotify";
+   font-family: 'circular_spotify';
 }
 
 body
@@ -14,20 +14,11 @@ body
    margin: 0px;
 }
 
-header
-{
-   margin-left: 0px;
-   margin-right: 0px;
-   
-   margin-top: 0px;
-   background-color: #264653;
-   padding: 1px;
-}
-
 h1
 {
    text-align: center;
-   color: white;
+   color: #000;
+   font-size: 112pt;
 }
 
 p
@@ -35,7 +26,7 @@ p
    padding-left: 20px;
    padding-right: 20px;
    align-content: center;
-   color: white;
+   color: #000;
 }
 
 button
@@ -69,8 +60,9 @@ button:active
 
 footer
 {
-   position: absolute;  /*j'ai mis ca sinon le footer n'allait pas en bas*/
-   margin: 10px;
-   bottom: 0;
-   color: white;
+   /*position: absolute;  j'ai mis ca sinon le footer n'allait pas en bas*/
+   position:absolute;
+   bottom: 10px;
+   right: 10px;
+   color: black;
 }
