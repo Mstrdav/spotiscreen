@@ -59,7 +59,7 @@ if (access_token && (state == null || state !== storedState)) {
     });
 
     // get most listened to artists
-    fetch("https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=10", {
+    fetch("https://api.spotify.com/v1/me/top/albums?limit=10", {
       headers: {
         Authorization: "Bearer " + access_token
       }
