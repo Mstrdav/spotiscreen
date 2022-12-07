@@ -38,8 +38,8 @@ var access_token = params.access_token,
   storedState = localStorage.getItem(stateKey);
 
 if (access_token && (state == null || state !== storedState)) {
-  console.log(state);
-  alert("There was an error during the authentication");
+  console.log("state : " + state);
+  console.log("There was an error during the authentication");
 } else {
   localStorage.removeItem(stateKey);
   if (access_token) {
@@ -52,6 +52,10 @@ if (access_token && (state == null || state !== storedState)) {
         Authorization: "Bearer " + access_token
       }
     }).then(function(response) {
+      if (response.error) {
+        throw response.error;
+      }
+
       return response.json();
     }).then(function(data) {
       console.log(data);
@@ -59,19 +63,19 @@ if (access_token && (state == null || state !== storedState)) {
     });
 
     // get most listened to artists
-    fetch("https://api.spotify.com/v1/me/top/albums?limit=10", {
-      headers: {
-        Authorization: "Bearer " + access_token
-      }
-    }).then(function(response) {
-      return response.json();
-    }).then(function(data) {
-      console.log(data);
-      var artists = document.getElementById("artists");
-      for (var i = 0; i < data.items.length; i++) {
-        artists.innerHTML += data.items[i].name + "<br>";
-      }
-    });
+    // fetch("https://api.spotify.com/v1/me/top/albums?limit=10", {
+    //   headers: {
+    //     Authorization: "Bearer " + access_token
+    //   }
+    // }).then(function(response) {
+    //   return response.json();
+    // }).then(function(data) {
+    //   console.log(data);
+    //   var artists = document.getElementById("artists");
+    //   for (var i = 0; i < data.items.length; i++) {
+    //     artists.innerHTML += data.items[i].name + "<br>";
+    //   }
+    // });
 
     //  -----------------------------------------
   } else {
