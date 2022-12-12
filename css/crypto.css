@@ -5,7 +5,7 @@
  
  html
  {
-    background: #ECD06F;
+    background: #e2dfd2;
     font-family: 'circular_spotify';
  
  }
@@ -46,7 +46,7 @@
  
  button:hover
  {
-    background-color: #ECD06F;
+    background-color: #dad3ba;
     color: #000;
     
  
